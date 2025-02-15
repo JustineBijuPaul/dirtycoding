@@ -1,4 +1,5 @@
 import apiService from './api.js';
+import { submitToGoogleSheets, getAllLocalStorageData } from './api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Get DOM elements
@@ -142,6 +143,17 @@ document.addEventListener('DOMContentLoaded', () => {
             showError(error.message);
         } finally {
             hideLoading();
+        }
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', async () => {
+        try {
+            const allData = getAllLocalStorageData();
+            await submitToGoogleSheets(allData);
+            alert('Data submitted successfully!');
+        } catch (error) {
+            alert('Failed to submit data. Please try again.');
+            console.error('Submission error:', error);
         }
     });
 
