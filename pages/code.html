@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirty Coding - Complexity Analyzer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="user-info">
+                <h1>Dirty Coding</h1>
+                <p>Welcome, <span id="userName">User</span>!</p>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="code-container">
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="ruby">Ruby</option>
+                </select>
+            </div>
+            <textarea id="codeInput" placeholder="Enter your code here..."></textarea>
+            <div class="button-group">
+                <button id="analyzeBtn">Analyze Code</button>
+                <button id="submitBtn" class="submit-button">Submit Code</button>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="complexity-box">
+                <h2>Time Complexity</h2>
+                <p id="timeComplexity">O(1)</p>
+            </div>
+            <div class="complexity-box">
+                <h2>Space Complexity</h2>
+                <p id="spaceComplexity">O(1)</p>
+            </div>
+            <div class="feedback">
+                <h3>Analysis Results</h3>
+                <p id="feedback"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Remove or comment out old script tags -->
+    <!-- <script src="../js/script.js"></script> -->
+    <!-- <script src="../js/codeAnalysis.js"></script> -->
+    
+    <!-- Add new module script -->
+    <script type="module" src="../js/codeAnalysis.js"></script>
+</body>
+</html>
